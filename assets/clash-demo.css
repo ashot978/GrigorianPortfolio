@@ -1,3 +1,11 @@
+.cth-project-heading {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: clamp(.85rem, 3vw, 1.6rem);
+}
+.cth-project-heading .project-icon { width: clamp(3.75rem, 9vw, 6.4rem); }
+
 .demo-section.cth-demo-section {
   grid-template-columns: minmax(0, 1fr);
   gap: 1.25rem;
