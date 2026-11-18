@@ -56,6 +56,11 @@ h3 { font-size: clamp(1.7rem, 4vw, 3.05rem); }
 .hero-actions, .footer-links { display: flex; flex-wrap: wrap; align-items: center; gap: .8rem 1.2rem; }
 .text-action { font-weight: 650; }
 
+.home-hero h1 {
+  max-inline-size: 13ch;
+  font-size: clamp(2.65rem, 6.3vw, 6rem);
+  text-wrap: balance;
+}
 .home-hero h1 em {
   background: linear-gradient(transparent 72%, var(--acid) 72%, var(--acid) 88%, transparent 88%);
 }
