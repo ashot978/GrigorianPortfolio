@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="AshLab Studios bouwt onafhankelijke Android-apps. Ontdek Clash Timer Hub en bekijk hoe de widget werkt.">
+  <meta name="theme-color" content="#f4f2e9">
+  <title>AshLab Studios · Android-appstudio</title>
+  <link rel="stylesheet" href="assets/studio.css">
+  <script src="assets/studio.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#inhoud">Naar de inhoud</a>
+  <header class="shell topbar">
+    <a class="wordmark" href="./" aria-label="AshLab Studios, home"><span class="mark" aria-hidden="true">✳</span> AshLab<span class="wordmark-secondary"> Studios</span></a>
+    <nav class="nav" aria-label="Hoofdnavigatie">
+      <a href="#apps">Apps</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+  </header>
+
+  <main id="inhoud" class="shell">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="dot" aria-hidden="true"></span> Onafhankelijke Android-studio</p>
+        <h1 id="hero-title">AshLab<br><em>Studios.</em></h1>
+        <p class="lede">Android-apps die informatie uit verschillende schermen op één plek samenbrengen.</p>
+        <a class="button" href="#apps">Ontdek de apps <span aria-hidden="true">↘</span></a>
+      </div>
+      <div class="demo" aria-label="Interactieve demonstratie van Clash Timer Hub">
+        <div class="demo-head">
+          <div class="demo-brand"><span aria-hidden="true">◷</span> Clash Timer Hub</div>
+          <span class="demo-label">Demo</span>
+        </div>
+        <div class="demo-body">
+          <div class="device" data-device>
+            <section id="demo-overzicht" aria-label="Overzicht met voorbeeldtimers">
+              <div class="device-header"><span>Builder-timers</span><span class="device-tag">02 actief</span></div>
+              <div class="timer-row">
+                <span class="timer-icon green" aria-hidden="true">↗</span>
+                <div><strong>Hoofddorp</strong><small>Upgrade loopt</small></div>
+                <time data-timer="4643">01:17:23</time>
+              </div>
+              <div class="timer-row">
+                <span class="timer-icon lilac" aria-hidden="true">↗</span>
+                <div><strong>Tweede dorp</strong><small>Upgrade loopt</small></div>
+                <time data-timer="9848">02:44:08</time>
+              </div>
+            </section>
+            <section id="demo-widget" aria-label="Widget met voorbeeldtimer" hidden>
+              <div class="device-header"><span>Homescreenwidget</span><span class="device-tag">Compact</span></div>
+              <div class="widget">
+                <span class="widget-label">Volgende upgrade klaar</span>
+                <time data-timer="4643">01:17:23</time>
+                <span>Hoofddorp</span>
+              </div>
+            </section>
+          </div>
+        </div>
+        <div class="demo-controls" hidden>
+          <div class="segmented" role="group" aria-label="Demoweergave">
+            <button type="button" aria-controls="demo-overzicht" aria-pressed="true">Overzicht</button>
+            <button type="button" aria-controls="demo-widget" aria-pressed="false">Widget</button>
+          </div>
+          <button type="button" class="play-toggle" data-pause>Timervoorbeeld pauzeren</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="apps" class="section" aria-labelledby="apps-title">
+      <div class="section-heading">
+        <h2 id="apps-title">Apps</h2>
+        <span class="section-meta">Android</span>
+      </div>
+      <a class="project" href="apps/clash-timer-hub/">
+        <div class="project-icon" aria-hidden="true">◷</div>
+        <div class="project-copy">
+          <p class="eyebrow project-kicker">In ontwikkeling</p>
+          <h3>Clash Timer Hub</h3>
+          <p>Bekijk je bouwtimers voor meerdere Clash of Clans-accounts vanuit één dashboard of widget.</p>
+        </div>
+        <span class="project-arrow" aria-hidden="true">↗</span>
+      </a>
+    </section>
+
+    <section id="faq" class="section faq" aria-labelledby="faq-title">
+      <div>
+        <h2 id="faq-title">Veelgestelde<br>vragen</h2>
+      </div>
+      <div class="questions">
+        <details>
+          <summary>Waar kan ik Clash Timer Hub vinden?</summary>
+          <p>De app is in ontwikkeling. Op de <a href="apps/clash-timer-hub/">app-pagina</a> vind je de projectlink en uitleg over de widget.</p>
+        </details>
+        <details>
+          <summary>Waar vind ik het privacybeleid en de voorwaarden?</summary>
+          <p>Op de app-pagina vind je de actuele status van het privacybeleid en de voorwaarden.</p>
+        </details>
+        <details>
+          <summary>Hoe meld ik een probleem?</summary>
+          <p>Open een melding via <a href="https://github.com/ashot978/ClashTimerHub/issues">GitHub Issues</a>. Vermeld je Android-versie, appversie en de stappen waarmee het probleem optreedt. Laat persoonlijke gegevens uit je melding.</p>
+        </details>
+      </div>
+    </section>
+  </main>
+  <footer class="shell footer">
+    <a class="wordmark" href="./"><span class="mark" aria-hidden="true">✳</span> AshLab Studios</a>
+    <a href="privacy.html">Websiteprivacy</a>
+  </footer>
+</body>
+</html>
