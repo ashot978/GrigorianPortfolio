@@ -1,6 +1,6 @@
-# AshLab Studios
+# Ashot Grigorian · Portfolio
 
-Persoonlijk portfolio voor prototypes en apps in HTML, CSS en JavaScript. Geen build of externe dependencies.
+Persoonlijk portfolio met cv, werkcases en het app-label AshLab Studios in HTML, CSS en JavaScript. Geen build of externe dependencies.
 
 ## Voorbeeld lokaal openen
 
@@ -21,4 +21,4 @@ https://ashot978.github.io/AshLabStudios/
 
 ## Een app toevoegen
 
-Voeg een eigen appmap onder `apps/` toe en plaats een kaart op de homepage. Gebruik `concepten/appbeleid.md` als invuldocument. Gebruik in Play Console de directe URL van het definitieve privacybeleid van de app, naast de vermelding in de app zelf.
+Voeg een eigen appmap onder `apps/` toe en plaats een kaart op de projectpagina van AshLab Studios. Gebruik `concepten/appbeleid.md` als invuldocument. Gebruik in Play Console de directe URL van het definitieve privacybeleid van de app, naast de vermelding in de app zelf.
