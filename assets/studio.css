@@ -56,6 +56,99 @@ h3 { font-size: clamp(1.7rem, 4vw, 3.05rem); }
 .hero-actions, .footer-links { display: flex; flex-wrap: wrap; align-items: center; gap: .8rem 1.2rem; }
 .text-action { font-weight: 650; }
 
+.home-hero h1 em {
+  background: linear-gradient(transparent 72%, var(--acid) 72%, var(--acid) 88%, transparent 88%);
+}
+.hero-art {
+  --tilt-x: 0deg;
+  --tilt-y: 0deg;
+  position: relative;
+  display: grid;
+  place-items: center;
+  isolation: isolate;
+  min-height: clamp(15.5rem, 38vw, 31rem);
+  overflow: hidden;
+  border: 1px solid #3a4235;
+  border-radius: 1.6rem;
+  background:
+    radial-gradient(ellipse at 68% 22%, #3b3a52 0, transparent 55%),
+    radial-gradient(ellipse at 25% 85%, #333e23 0, transparent 58%),
+    #191d19;
+}
+.hero-art::before {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  content: "";
+  background: radial-gradient(#f4f2e954 1px, transparent 1px) 0 0 / 18px 18px;
+  mask-image: radial-gradient(ellipse, black, transparent 85%);
+}
+.hero-art-scene {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: min(82%, 25rem);
+  aspect-ratio: 1;
+  transform: perspective(740px) rotateX(var(--tilt-x)) rotateY(var(--tilt-y));
+  transition: transform .26s cubic-bezier(.2,.75,.3,1);
+}
+.hero-orbit {
+  position: absolute;
+  width: 100%;
+  height: 55%;
+  border: 1px solid #e9e2ff63;
+  border-radius: 50%;
+}
+.hero-orbit-wide { transform: rotate(-27deg); }
+.hero-orbit-tall { transform: rotate(43deg); }
+.hero-orbit-dashed { width: 86%; border-style: dashed; border-color: #dcfc6394; transform: rotate(13deg); }
+.hero-monogram {
+  z-index: 1;
+  display: grid;
+  place-items: center;
+  width: 52%;
+  aspect-ratio: 1;
+  transform: rotate(-10deg);
+  border: 1px solid #f0ffae;
+  border-radius: 25%;
+  background: linear-gradient(150deg, #efffae, var(--acid) 75%);
+  box-shadow: .45rem .55rem 0 #131612, 0 1.5rem 2.4rem #0006;
+  font: italic 500 clamp(2.7rem, 8vw, 7rem)/1 Georgia, serif;
+  letter-spacing: -.13em;
+}
+.hero-monogram span { padding-inline-end: .16em; }
+.hero-art-spark {
+  position: absolute;
+  z-index: 2;
+  inset: 12% 11% auto auto;
+  color: var(--lilac);
+  font-size: clamp(1.5rem, 4vw, 3rem);
+  line-height: 1;
+}
+.hero-art-satellite {
+  position: absolute;
+  inset: auto auto 20% 9%;
+  width: clamp(.75rem, 2vw, 1.45rem);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: var(--acid);
+  box-shadow: 0 0 1.15rem #dcfc636b;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .home-hero .eyebrow, .home-hero h1, .home-hero .lede, .home-hero .hero-actions, .hero-art {
+    animation: home-enter .65s cubic-bezier(.2,.75,.3,1) backwards;
+  }
+  .home-hero h1 { animation-delay: .08s; }
+  .home-hero .lede { animation-delay: .15s; }
+  .home-hero .hero-actions, .hero-art { animation-delay: .2s; }
+  .hero-monogram { animation: monogram-enter 1s .25s cubic-bezier(.2,.75,.3,1) backwards; }
+  .hero-art-spark { animation: spark-enter .85s .5s cubic-bezier(.2,.75,.3,1) backwards; }
+  @keyframes home-enter { from { opacity: 0; transform: translateY(1.15rem); } }
+  @keyframes monogram-enter { from { opacity: 0; transform: translateY(1rem) rotate(-30deg) scale(.75); } }
+  @keyframes spark-enter { from { opacity: 0; transform: rotate(-90deg) scale(.4); } }
+}
+
 .signature {
   display: grid;
   place-items: center;
@@ -81,7 +174,6 @@ h3 { font-size: clamp(1.7rem, 4vw, 3.05rem); }
 }
 .signature:hover .signature-frame { transform: rotate(-4deg) translateY(-4px); }
 .signature-letter { padding-right: .15em; font: italic 500 clamp(5.5rem, 12vw, 10rem)/1 Georgia, serif; }
-.signature-spark { position: absolute; top: .4em; right: .55em; font-size: clamp(1rem, 3vw, 2rem); }
 .studio-signature .signature-letter { padding: 0; font-family: system-ui, sans-serif; }
 @keyframes signature-enter {
   from { opacity: 0; translate: 0 12px; }
@@ -179,6 +271,7 @@ details p { color: var(--muted); margin: 0 0 1rem; max-width: 58ch; }
   .shell { width: min(1180px, calc(100% - 3rem)); }
   .hero, .demo-section { grid-template-columns: 1fr; }
   h1 { font-size: clamp(4rem, 15vw, 7rem); }
+  .hero-art-scene { width: min(71%, 19rem); }
 }
 
 @media (max-width: 540px) {
@@ -206,6 +299,7 @@ details p { color: var(--muted); margin: 0 0 1rem; max-width: 58ch; }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   .button, .mark, .project { transition: none; }
+  .hero-art-scene { transform: none; transition: none; }
   .signature-frame { animation: none; transition: none; }
   .project:hover, .wordmark:hover .mark { transform: none; }
   .signature:hover .signature-frame { transform: rotate(-8deg); }

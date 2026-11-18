@@ -1,24 +1,24 @@
 # Ashot Grigorian · Portfolio
 
-Persoonlijk portfolio met cv, werkcases en het app-label AshLab Studios in HTML, CSS en JavaScript. Geen build of externe dependencies.
+Personal portfolio with a CV, case studies and AshLab Studios projects. Built in HTML, CSS and JavaScript without a build step or external dependencies.
 
-## Voorbeeld lokaal openen
+## Preview locally
 
-Start vanuit deze map
+Run this command from the repository root.
 
 ```sh
 python3 -m http.server 8000
 ```
 
-Open http://localhost:8000. De Clash Timer Hub-projectpagina bevat een demo met fictieve timers.
+Open http://localhost:8000. The Clash Timer Hub demo uses sample timers.
 
 ## GitHub Pages
 
-Ga naar Settings → Pages → Deploy from a branch. Kies `main` en `/ (root)`.
+In the repository settings, open Pages and choose Deploy from a branch. Select `main` and `/ (root)`.
 
-Projectadres na publicatie  
+Project URL after publishing  
 https://ashot978.github.io/AshLabStudios/
 
-## Een app toevoegen
+## Add an app
 
-Voeg een eigen appmap onder `apps/` toe en plaats een kaart op de projectpagina van AshLab Studios. Gebruik `concepten/appbeleid.md` als invuldocument. Gebruik in Play Console de directe URL van het definitieve privacybeleid van de app, naast de vermelding in de app zelf.
+Create a folder under `apps/` and add a card to `work/ashlab-studios/index.html`. Use `drafts/app-policy.md` to prepare the app’s policies. Add the direct link to the final privacy policy in Play Console and in the app.
