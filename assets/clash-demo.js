@@ -108,6 +108,7 @@ if (clashDemo) {
 
   const timeFormat = new Intl.DateTimeFormat("en-GB", { hour: "2-digit", minute: "2-digit" });
   const dateFormat = new Intl.DateTimeFormat("en-GB", { weekday: "short", day: "numeric", month: "short" });
+  const widgetDateFormat = new Intl.DateTimeFormat("en-GB", { day: "numeric", month: "short" });
   const now = new Date();
   const tomorrow = new Date(now);
   tomorrow.setDate(now.getDate() + 1);
@@ -117,7 +118,11 @@ if (clashDemo) {
     const time = timeFormat.format(date);
     const day = date.toDateString();
 
-    if (day === now.toDateString()) {
+    if (finish.dataset.finishFormat === "widget") {
+      if (day === now.toDateString()) finish.textContent = time;
+      else if (day === tomorrow.toDateString()) finish.textContent = `Tmr ${time}`;
+      else finish.textContent = `${widgetDateFormat.format(date)} ${time}`;
+    } else if (day === now.toDateString()) {
       finish.textContent = `Today at ${time}`;
     } else if (day === tomorrow.toDateString()) {
       finish.textContent = `Tomorrow at ${time}`;
@@ -126,23 +131,40 @@ if (clashDemo) {
     }
   }
 
+  function formatTimer(remaining, format) {
+    const totalHours = Math.floor(remaining / 3600);
+    const minutes = Math.floor(remaining / 60) % 60;
+    const seconds = remaining % 60;
+    const pad = value => String(value).padStart(2, "0");
+
+    if (format === "widget") {
+      const clock = `${pad(minutes)}:${pad(seconds)}`;
+      return totalHours ? `${totalHours}:${clock}` : clock;
+    }
+    if (format === "helper") {
+      if (!remaining) return "Ready";
+      const rounded = Math.ceil(remaining / 60);
+      const hours = Math.floor(rounded / 60);
+      return hours ? `${hours}h${pad(rounded % 60)}` : `${rounded}m`;
+    }
+
+    const days = Math.floor(totalHours / 24);
+    const hours = totalHours % 24;
+    const parts = [];
+    if (days) parts.push(`${days}d`);
+    if (hours) parts.push(`${hours}h`);
+    if (minutes) parts.push(`${minutes}m`);
+    if (remaining < 3600) parts.push(`${seconds}s`);
+    return parts.join(" ");
+  }
+
   function renderTimers() {
     const runningFor = interval === undefined ? 0 : performance.now() - startedAt;
     const elapsedSeconds = Math.floor((elapsed + runningFor) / 1000);
 
     for (const timer of timers) {
       const remaining = Math.max(0, Number(timer.dataset.timer) - elapsedSeconds);
-      const days = Math.floor(remaining / 86400);
-      const hours = Math.floor(remaining / 3600) % 24;
-      const minutes = Math.floor(remaining / 60) % 60;
-      const parts = [];
-
-      if (days) parts.push(`${days}d`);
-      if (hours) parts.push(`${hours}h`);
-      if (minutes) parts.push(`${minutes}m`);
-      if (remaining < 3600) parts.push(`${remaining % 60}s`);
-
-      const label = parts.join(" ");
+      const label = formatTimer(remaining, timer.dataset.timerFormat);
       if (timer.textContent !== label) timer.textContent = label;
       timer.dateTime = `PT${remaining}S`;
     }

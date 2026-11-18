@@ -6,9 +6,9 @@
   <meta name="description" content="Track Clash of Clans upgrade timers across multiple accounts with Clash Timer Hub. Explore the widget, FAQ and project details.">
   <title>Clash Timer Hub · AshLab Studios</title>
   <link rel="stylesheet" href="../../assets/studio.css">
-  <link rel="stylesheet" href="../../assets/clash-demo.css">
+  <link rel="stylesheet" href="../../assets/clash-demo.css?v=all-timers-1">
   <script src="../../assets/scroll.js" defer></script>
-  <script src="../../assets/clash-demo.js" defer></script>
+  <script src="../../assets/clash-demo.js?v=all-timers-1" defer></script>
 </head>
 <body>
   <a class="skip" href="#main-content">Skip to content</a>
@@ -40,104 +40,82 @@
           <button type="button" data-pause>Pause sample timers</button>
         </div>
 
-        <section id="cth-widget" class="cth-widget-preview" aria-label="Home screen widget">
+        <section id="cth-widget" class="cth-widget-preview" aria-labelledby="cth-widget-title">
           <div class="cth-widget">
-            <div class="cth-widget-row">
-              <div class="cth-widget-account">
-                <strong>Oak Village</strong>
-                <span class="cth-widget-builders" aria-label="1 ready, 4 active builders">1✓ 4⚒</span>
-              </div>
-              <dl class="cth-widget-timers">
-                <div class="cth-widget-next">
-                  <dt><span aria-hidden="true">⚒</span> Next builder</dt>
-                  <dd><time data-timer="4680" datetime="PT4680S">1h 18m</time> <small data-finish="4680">Today</small></dd>
-                </div>
-                <div>
-                  <dt><span aria-hidden="true">🧙</span> Lab</dt>
-                  <dd><time data-timer="24720" datetime="PT24720S">6h 52m</time></dd>
-                </div>
-                <div>
-                  <dt><span aria-hidden="true">🐾</span> Pet</dt>
-                  <dd><time data-timer="16740" datetime="PT16740S">4h 39m</time></dd>
-                </div>
-                <div class="cth-widget-helpers">
-                  <dt><span aria-hidden="true">🤝</span> Helpers <small>1/3 ready</small></dt>
-                  <dd><time data-timer="2100" datetime="PT2100S">35m 0s</time></dd>
-                </div>
-              </dl>
+            <h3 id="cth-widget-title" class="cth-widget-title">All timers</h3>
+            <p id="cth-widget-note" class="cth-widget-note">7 accounts · green = boosted</p>
+            <div class="cth-widget-scroll" role="region" aria-label="Account timers" tabindex="0">
+              <table class="cth-widget-table" aria-describedby="cth-widget-note">
+                <colgroup>
+                  <col class="cth-widget-col-name">
+                  <col class="cth-widget-col-builders">
+                  <col class="cth-widget-col-helpers">
+                  <col span="3" class="cth-widget-col-upgrade">
+                </colgroup>
+                <thead class="cth-sr-only">
+                  <tr><th scope="col">Account</th><th scope="col">Builder status</th><th scope="col">Helpers</th><th scope="col">Lab, finish time</th><th scope="col">Pet, finish time</th><th scope="col">Next builder, finish time</th></tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">Stone Keep</th>
+                    <td class="cth-widget-builders"><span class="cth-sr-only">0 ready, 5 active builders</span><span aria-hidden="true">0✓ 5⚒</span></td>
+                    <td class="cth-widget-helpers"><span aria-hidden="true">🤝</span> <span aria-label="0 of 3 helpers ready">0/3</span> · <time data-timer="5880" data-timer-format="helper" datetime="PT5880S">1h38</time></td>
+                    <td class="cth-widget-upgrade"><span class="cth-widget-clock"><span aria-hidden="true">🧙</span> <time data-timer="7200" data-timer-format="widget" datetime="PT7200S">2:00:00</time></span><span class="cth-widget-finish" data-finish="7200" data-finish-format="widget">—</span></td>
+                    <td class="cth-widget-upgrade"><span class="cth-widget-clock"><span aria-hidden="true">🐾</span> Idle</span><span aria-hidden="true">—</span></td>
+                    <td class="cth-widget-upgrade is-boosted"><span class="cth-widget-clock is-next"><span aria-hidden="true">⚒</span> <span class="cth-sr-only">Boosted: </span><time data-timer="1370" data-timer-format="widget" datetime="PT1370S">22:50</time></span><span class="cth-widget-finish" data-finish="1370" data-finish-format="widget">—</span></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Oak Village</th>
+                    <td class="cth-widget-builders"><span class="cth-sr-only">1 ready, 4 active builders</span><span aria-hidden="true">1✓ 4⚒</span></td>
+                    <td class="cth-widget-helpers"><span aria-hidden="true">🤝</span> <span aria-label="1 of 3 helpers ready">1/3</span> · <time data-timer="2100" data-timer-format="helper" datetime="PT2100S">35m</time></td>
+                    <td class="cth-widget-upgrade"><span class="cth-widget-clock"><span aria-hidden="true">🧙</span> <time data-timer="24720" data-timer-format="widget" datetime="PT24720S">6:52:00</time></span><span class="cth-widget-finish" data-finish="24720" data-finish-format="widget">—</span></td>
+                    <td class="cth-widget-upgrade"><span class="cth-widget-clock"><span aria-hidden="true">🐾</span> <time data-timer="16740" data-timer-format="widget" datetime="PT16740S">4:39:00</time></span><span class="cth-widget-finish" data-finish="16740" data-finish-format="widget">—</span></td>
+                    <td class="cth-widget-upgrade"><span class="cth-widget-clock"><span aria-hidden="true">⚒</span> <time data-timer="4680" data-timer-format="widget" datetime="PT4680S">1:18:00</time></span><span class="cth-widget-finish" data-finish="4680" data-finish-format="widget">—</span></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">River Camp</th>
+                    <td class="cth-widget-builders"><span class="cth-sr-only">0 ready, 3 active builders</span><span aria-hidden="true">0✓ 3⚒</span></td>
+                    <td class="cth-widget-helpers"><span aria-hidden="true">🤝</span> <span aria-label="2 of 3 helpers ready">2/3</span> · <time data-timer="4920" data-timer-format="helper" datetime="PT4920S">1h22</time></td>
+                    <td class="cth-widget-upgrade"><span class="cth-widget-clock"><span aria-hidden="true">🧙</span> Maxed ✓</span><span aria-hidden="true">—</span></td>
+                    <td class="cth-widget-upgrade"><span class="cth-widget-clock"><span aria-hidden="true">🐾</span> <time data-timer="22860" data-timer-format="widget" datetime="PT22860S">6:21:00</time></span><span class="cth-widget-finish" data-finish="22860" data-finish-format="widget">—</span></td>
+                    <td class="cth-widget-upgrade"><span class="cth-widget-clock"><span aria-hidden="true">⚒</span> <time data-timer="9848" data-timer-format="widget" datetime="PT9848S">2:44:08</time></span><span class="cth-widget-finish" data-finish="9848" data-finish-format="widget">—</span></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Cedar Vale</th>
+                    <td class="cth-widget-builders"><span class="cth-sr-only">0 ready, 7 active builders</span><span aria-hidden="true">0✓ 7⚒</span></td>
+                    <td class="cth-widget-helpers"><span aria-hidden="true">🤝</span> <span aria-label="0 of 2 helpers ready">0/2</span> · <time data-timer="67920" data-timer-format="helper" datetime="PT67920S">18h52</time></td>
+                    <td class="cth-widget-upgrade is-boosted"><span class="cth-widget-clock"><span aria-hidden="true">🧙</span> <span class="cth-sr-only">Boosted: </span><time data-timer="259678" data-timer-format="widget" datetime="PT259678S">72:07:58</time></span><span class="cth-widget-finish" data-finish="259678" data-finish-format="widget">—</span></td>
+                    <td class="cth-widget-upgrade"><span class="cth-widget-clock"><span aria-hidden="true">🐾</span> <time data-timer="129430" data-timer-format="widget" datetime="PT129430S">35:57:10</time></span><span class="cth-widget-finish" data-finish="129430" data-finish-format="widget">—</span></td>
+                    <td class="cth-widget-upgrade is-boosted"><span class="cth-widget-clock"><span aria-hidden="true">⚒</span> <span class="cth-sr-only">Boosted: </span><time data-timer="60153" data-timer-format="widget" datetime="PT60153S">16:42:33</time></span><span class="cth-widget-finish" data-finish="60153" data-finish-format="widget">—</span></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Granite Fort</th>
+                    <td class="cth-widget-builders"><span class="cth-sr-only">0 ready, 7 active builders</span><span aria-hidden="true">0✓ 7⚒</span></td>
+                    <td class="cth-widget-helpers"><span aria-hidden="true">🤝</span> <span aria-label="0 of 2 helpers ready">0/2</span> · <time data-timer="77280" data-timer-format="helper" datetime="PT77280S">21h28</time></td>
+                    <td class="cth-widget-upgrade"><span class="cth-widget-clock"><span aria-hidden="true">🧙</span> <time data-timer="417785" data-timer-format="widget" datetime="PT417785S">116:03:05</time></span><span class="cth-widget-finish" data-finish="417785" data-finish-format="widget">—</span></td>
+                    <td class="cth-widget-upgrade"><span class="cth-widget-clock"><span aria-hidden="true">🐾</span> <time data-timer="236719" data-timer-format="widget" datetime="PT236719S">65:45:19</time></span><span class="cth-widget-finish" data-finish="236719" data-finish-format="widget">—</span></td>
+                    <td class="cth-widget-upgrade is-boosted"><span class="cth-widget-clock"><span aria-hidden="true">⚒</span> <span class="cth-sr-only">Boosted: </span><time data-timer="68528" data-timer-format="widget" datetime="PT68528S">19:02:08</time></span><span class="cth-widget-finish" data-finish="68528" data-finish-format="widget">—</span></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Meadow Hold</th>
+                    <td class="cth-widget-builders"><span class="cth-sr-only">0 ready, 7 active builders</span><span aria-hidden="true">0✓ 7⚒</span></td>
+                    <td class="cth-widget-helpers"><span aria-hidden="true">🤝</span> <span aria-label="0 of 2 helpers ready">0/2</span> · <time data-timer="79320" data-timer-format="helper" datetime="PT79320S">22h02</time></td>
+                    <td class="cth-widget-upgrade is-boosted"><span class="cth-widget-clock"><span aria-hidden="true">🧙</span> <span class="cth-sr-only">Boosted: </span><time data-timer="134597" data-timer-format="widget" datetime="PT134597S">37:23:17</time></span><span class="cth-widget-finish" data-finish="134597" data-finish-format="widget">—</span></td>
+                    <td class="cth-widget-upgrade"><span class="cth-widget-clock"><span aria-hidden="true">🐾</span> <time data-timer="568501" data-timer-format="widget" datetime="PT568501S">157:55:01</time></span><span class="cth-widget-finish" data-finish="568501" data-finish-format="widget">—</span></td>
+                    <td class="cth-widget-upgrade is-boosted"><span class="cth-widget-clock"><span aria-hidden="true">⚒</span> <span class="cth-sr-only">Boosted: </span><time data-timer="92002" data-timer-format="widget" datetime="PT92002S">25:33:22</time></span><span class="cth-widget-finish" data-finish="92002" data-finish-format="widget">—</span></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Pine Outpost</th>
+                    <td class="cth-widget-builders"><span class="cth-sr-only">0 ready, 2 active builders</span><span aria-hidden="true">0✓ 2⚒</span></td>
+                    <td class="cth-widget-helpers"><span aria-hidden="true">🤝</span> <span aria-label="3 of 3 helpers ready">3/3</span> · ✓</td>
+                    <td class="cth-widget-upgrade"><span class="cth-widget-clock"><span aria-hidden="true">🧙</span> <time data-timer="36480" data-timer-format="widget" datetime="PT36480S">10:08:00</time></span><span class="cth-widget-finish" data-finish="36480" data-finish-format="widget">—</span></td>
+                    <td class="cth-widget-upgrade"><span class="cth-widget-clock"><span aria-hidden="true">🐾</span> Idle</span><span aria-hidden="true">—</span></td>
+                    <td class="cth-widget-upgrade"><span class="cth-widget-clock"><span aria-hidden="true">⚒</span> <time data-timer="103200" data-timer-format="widget" datetime="PT103200S">28:40:00</time></span><span class="cth-widget-finish" data-finish="103200" data-finish-format="widget">—</span></td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
-            <div class="cth-widget-row">
-              <div class="cth-widget-account">
-                <strong>Stone Keep</strong>
-                <span class="cth-widget-builders" aria-label="0 ready, 5 active builders">0✓ 5⚒</span>
-              </div>
-              <dl class="cth-widget-timers">
-                <div class="cth-widget-next">
-                  <dt><span aria-hidden="true">⚒</span> Next builder</dt>
-                  <dd><time data-timer="1370" datetime="PT1370S">22m 50s</time> <small data-finish="1370">Today</small></dd>
-                </div>
-                <div>
-                  <dt><span aria-hidden="true">🧙</span> Lab</dt>
-                  <dd><time data-timer="7200" datetime="PT7200S">2h</time></dd>
-                </div>
-                <div>
-                  <dt><span aria-hidden="true">🐾</span> Pet</dt>
-                  <dd>Idle</dd>
-                </div>
-                <div class="cth-widget-helpers">
-                  <dt><span aria-hidden="true">🤝</span> Helpers <small>0/3 ready</small></dt>
-                  <dd><time data-timer="5880" datetime="PT5880S">1h 38m</time></dd>
-                </div>
-              </dl>
-            </div>
-            <div class="cth-widget-row">
-              <div class="cth-widget-account">
-                <strong>River Camp</strong>
-                <span class="cth-widget-builders" aria-label="0 ready, 3 active builders">0✓ 3⚒</span>
-              </div>
-              <dl class="cth-widget-timers">
-                <div class="cth-widget-next">
-                  <dt><span aria-hidden="true">⚒</span> Next builder</dt>
-                  <dd><time data-timer="9848" datetime="PT9848S">2h 44m</time> <small data-finish="9848">Today</small></dd>
-                </div>
-                <div>
-                  <dt><span aria-hidden="true">🧙</span> Lab</dt>
-                  <dd>Maxed ✓</dd>
-                </div>
-                <div>
-                  <dt><span aria-hidden="true">🐾</span> Pet</dt>
-                  <dd><time data-timer="22860" datetime="PT22860S">6h 21m</time></dd>
-                </div>
-                <div class="cth-widget-helpers">
-                  <dt><span aria-hidden="true">🤝</span> Helpers <small>2/3 ready</small></dt>
-                  <dd><time data-timer="4920" datetime="PT4920S">1h 22m</time></dd>
-                </div>
-              </dl>
-            </div>
-            <div class="cth-widget-row">
-              <div class="cth-widget-account">
-                <strong>Pine Outpost</strong>
-                <span class="cth-widget-builders" aria-label="0 ready, 2 active builders">0✓ 2⚒</span>
-              </div>
-              <dl class="cth-widget-timers">
-                <div class="cth-widget-next">
-                  <dt><span aria-hidden="true">⚒</span> Next builder</dt>
-                  <dd><time data-timer="103200" datetime="PT103200S">1d 4h 40m</time> <small data-finish="103200">Tomorrow</small></dd>
-                </div>
-                <div>
-                  <dt><span aria-hidden="true">🧙</span> Lab</dt>
-                  <dd><time data-timer="36480" datetime="PT36480S">10h 8m</time></dd>
-                </div>
-                <div>
-                  <dt><span aria-hidden="true">🐾</span> Pet</dt>
-                  <dd>Idle</dd>
-                </div>
-                <div class="cth-widget-helpers">
-                  <dt><span aria-hidden="true">🤝</span> Helpers <small>3/3 ready</small></dt>
-                  <dd>Ready ✓</dd>
-                </div>
-              </dl>
-            </div>
+            <p class="cth-widget-hint">Swipe to see all timers</p>
             <div class="cth-widget-footer"><span>Sync OFF</span><span aria-label="Widget settings">⚙</span></div>
           </div>
         </section>
