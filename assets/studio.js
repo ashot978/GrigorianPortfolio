@@ -41,7 +41,7 @@ if (controls) {
       interval = window.setInterval(renderTimers, 250);
     }
 
-    pause.textContent = running ? "Timervoorbeeld pauzeren" : "Timervoorbeeld starten";
+    pause.textContent = running ? "Pause sample timers" : "Start sample timers";
     renderTimers();
   }
 
