@@ -6,8 +6,9 @@
   <meta name="description" content="Track Clash of Clans upgrade timers across multiple accounts with Clash Timer Hub. Explore the widget, FAQ and project details.">
   <title>Clash Timer Hub · AshLab Studios</title>
   <link rel="stylesheet" href="../../assets/studio.css">
+  <link rel="stylesheet" href="../../assets/clash-demo.css">
   <script src="../../assets/scroll.js" defer></script>
-  <script src="../../assets/studio.js" defer></script>
+  <script src="../../assets/clash-demo.js" defer></script>
 </head>
 <body>
   <a class="skip" href="#main-content">Skip to content</a>
@@ -28,45 +29,279 @@
     <section class="section demo-section" aria-labelledby="demo-title">
       <div>
         <h2 id="demo-title">Try the demo</h2>
-        <p>Switch between the dashboard and widget views. You can pause the sample timers.</p>
+        <p>Explore the Android interface from <a href="https://github.com/ashot978/ClashTimerHub/releases/tag/build-568">build #568</a> with sample accounts and live countdowns.</p>
       </div>
-      <div class="demo" aria-label="Interactive demo of Clash Timer Hub">
-        <div class="demo-head">
-          <div class="demo-brand"><span aria-hidden="true">◷</span> Clash Timer Hub</div>
-          <span class="demo-label">Demo</span>
+      <div class="demo cth-demo" data-clash-demo aria-label="Interactive demo of Clash Timer Hub">
+        <div class="cth-preview-controls" hidden>
+          <div role="group" aria-label="Preview type">
+            <button type="button" data-preview aria-controls="cth-app" aria-pressed="true">App</button>
+            <button type="button" data-preview aria-controls="cth-widget" aria-pressed="false">Widget</button>
+          </div>
+          <button type="button" data-pause>Pause sample timers</button>
         </div>
-        <div class="demo-body">
-          <div class="device" data-device>
-            <section id="demo-dashboard" aria-label="Dashboard with sample timers">
-              <div class="device-header"><span>Builder timers</span><span class="device-tag">02 active</span></div>
-              <div class="timer-row">
-                <span class="timer-icon green" aria-hidden="true">↗</span>
-                <div><strong>Main village</strong><small>Upgrade in progress</small></div>
-                <time data-timer="4643">01:17:23</time>
+
+        <div id="cth-app" class="cth-app">
+          <div class="cth-system-bar" aria-hidden="true"></div>
+          <div class="cth-navigation" data-navigation role="group" aria-label="App navigation">
+            <button type="button" data-tab aria-controls="cth-overview" aria-pressed="true" disabled>Overview</button>
+            <button type="button" data-tab aria-controls="cth-timeline" aria-pressed="false" disabled>Timeline</button>
+            <button type="button" data-tab aria-controls="cth-settings" aria-pressed="false" disabled>Settings</button>
+          </div>
+          <div class="cth-screen" data-screen role="region" aria-label="App screen" tabindex="0">
+            <div class="cth-masthead" data-masthead>
+              <div><strong>⚔ CLASH TIMER HUB</strong><span class="cth-language" aria-label="English">🇬🇧 ▾</span></div>
+              <small>COMMAND CENTER / V7</small>
+            </div>
+
+            <section id="cth-overview" aria-label="Overview">
+              <div data-accounts>
+                <h3 class="cth-section-label">⚔ ALL ACCOUNTS</h3>
+                <div class="cth-metrics">
+                  <span>4<br>ACCOUNTS</span>
+                  <span>14<br>BUILDERS BUSY</span>
+                  <span>1<br>READY</span>
+                </div>
+                <div class="cth-account-grid">
+                  <button class="cth-account is-ready" type="button" data-account="oak" aria-controls="cth-account-oak" disabled>
+                    <strong class="cth-account-name">⚔ Oak Village</strong>
+                    <span class="cth-account-status">1 UPGRADES READY</span>
+                    <span class="cth-account-timer"><time data-timer="4680" datetime="PT4680S">1h 18m</time></span>
+                    <span class="cth-account-finish"><span data-finish="4680">Today</span></span>
+                    <span class="cth-account-upgrade">⚒ Inferno Tower<br>⚒ 4 · 🧙 1 · 🐾 1</span>
+                    <span class="cth-card-checked">Checked</span>
+                  </button>
+                  <button class="cth-account is-urgent" type="button" data-account="stone" aria-controls="cth-account-stone" disabled>
+                    <strong class="cth-account-name">⚔ Stone Keep</strong>
+                    <span class="cth-account-status"></span>
+                    <span class="cth-account-timer"><time data-timer="1370" datetime="PT1370S">22m 50s</time></span>
+                    <span class="cth-account-finish"><span data-finish="1370">Today</span></span>
+                    <span class="cth-account-upgrade">⚒ X-Bow<br>⚒ 5 · 🧙 1 · 🐾 —</span>
+                  </button>
+                  <button class="cth-account is-active" type="button" data-account="river" aria-controls="cth-account-river" disabled>
+                    <strong class="cth-account-name">⚔ River Camp</strong>
+                    <span class="cth-account-status"></span>
+                    <span class="cth-account-timer"><time data-timer="9848" datetime="PT9848S">2h 44m</time></span>
+                    <span class="cth-account-finish"><span data-finish="9848">Today</span></span>
+                    <span class="cth-account-upgrade">⚒ Barracks<br>⚒ 3 · 🧙 ✓ · 🐾 1</span>
+                  </button>
+                  <button class="cth-account is-active" type="button" data-account="pine" aria-controls="cth-account-pine" disabled>
+                    <strong class="cth-account-name">⚔ Pine Outpost</strong>
+                    <span class="cth-account-status"></span>
+                    <span class="cth-account-timer"><time data-timer="103200" datetime="PT103200S">1d 4h 40m</time></span>
+                    <span class="cth-account-finish"><span data-finish="103200">Tomorrow</span></span>
+                    <span class="cth-account-upgrade">⚒ Army Camp<br>⚒ 2 · 🧙 1 · 🐾 —</span>
+                  </button>
+                </div>
               </div>
-              <div class="timer-row">
-                <span class="timer-icon lilac" aria-hidden="true">↗</span>
-                <div><strong>Second village</strong><small>Upgrade in progress</small></div>
-                <time data-timer="9848">02:44:08</time>
-              </div>
+              <section id="cth-account-oak" class="cth-account-detail" aria-label="Oak Village" hidden>
+                <button class="cth-plain-button cth-back" type="button" data-back>‹ Back to all accounts</button>
+                <h3>⚔ Oak Village</h3>
+                <p class="cth-ready">✓ 1 upgrade ready</p>
+                <button class="cth-equipment" type="button" data-open-collections aria-controls="cth-collections">Equipment &amp; Collections</button>
+                <h4>⚒ BUILDERS</h4>
+                <ul class="cth-timeline-list">
+                  <li class="cth-timeline-row">
+                    <span>Inferno Tower</span>
+                    <span><time data-timer="4680" datetime="PT4680S">1h 18m</time> · <span data-finish="4680">Today</span></span>
+                  </li>
+                </ul>
+              </section>
+              <section id="cth-account-stone" class="cth-account-detail" aria-label="Stone Keep" hidden>
+                <button class="cth-plain-button cth-back" type="button" data-back>‹ Back to all accounts</button>
+                <h3>⚔ Stone Keep</h3>
+                
+                <button class="cth-equipment" type="button" data-open-collections aria-controls="cth-collections">Equipment &amp; Collections</button>
+                <h4>⚒ BUILDERS</h4>
+                <ul class="cth-timeline-list">
+                  <li class="cth-timeline-row">
+                    <span>X-Bow</span>
+                    <span><time data-timer="1370" datetime="PT1370S">22m 50s</time> · <span data-finish="1370">Today</span></span>
+                  </li>
+                </ul>
+              </section>
+              <section id="cth-account-river" class="cth-account-detail" aria-label="River Camp" hidden>
+                <button class="cth-plain-button cth-back" type="button" data-back>‹ Back to all accounts</button>
+                <h3>⚔ River Camp</h3>
+                
+                <button class="cth-equipment" type="button" data-open-collections aria-controls="cth-collections">Equipment &amp; Collections</button>
+                <h4>⚒ BUILDERS</h4>
+                <ul class="cth-timeline-list">
+                  <li class="cth-timeline-row">
+                    <span>Barracks</span>
+                    <span><time data-timer="9848" datetime="PT9848S">2h 44m</time> · <span data-finish="9848">Today</span></span>
+                  </li>
+                </ul>
+              </section>
+              <section id="cth-account-pine" class="cth-account-detail" aria-label="Pine Outpost" hidden>
+                <button class="cth-plain-button cth-back" type="button" data-back>‹ Back to all accounts</button>
+                <h3>⚔ Pine Outpost</h3>
+                
+                <button class="cth-equipment" type="button" data-open-collections aria-controls="cth-collections">Equipment &amp; Collections</button>
+                <h4>⚒ BUILDERS</h4>
+                <ul class="cth-timeline-list">
+                  <li class="cth-timeline-row">
+                    <span>Army Camp</span>
+                    <span><time data-timer="103200" datetime="PT103200S">1d 4h 40m</time> · <span data-finish="103200">Tomorrow</span></span>
+                  </li>
+                </ul>
+              </section>
             </section>
-            <section id="demo-widget" aria-label="Widget with a sample timer" hidden>
-              <div class="device-header"><span>Home screen widget</span><span class="device-tag">Compact</span></div>
-              <div class="widget">
-                <span class="widget-label">Next upgrade finishes in</span>
-                <time data-timer="4643">01:17:23</time>
-                <span>Main village</span>
+
+            <section id="cth-timeline" aria-label="Timeline" hidden>
+              <h3 class="cth-section-label">TIMELINE · ALL ACCOUNTS</h3>
+              <div class="cth-filters" role="group" aria-label="Filter by upgrade type">
+                <button type="button" data-filter="all" aria-pressed="true">All</button>
+                <button type="button" data-filter="builders" aria-pressed="false">Builders</button>
+                <button type="button" data-filter="laboratory" aria-pressed="false">Laboratory</button>
+                <button type="button" data-filter="pets" aria-pressed="false">Pets</button>
               </div>
+              <ul class="cth-timeline-list">
+                  <li class="cth-timeline-row" data-category="builders">
+                    <span>Stone Keep · X-Bow</span>
+                    <span><time data-timer="1370" datetime="PT1370S">22m 50s</time> · <span data-finish="1370">Today</span></span>
+                  </li>
+                  <li class="cth-timeline-row" data-category="builders">
+                    <span>Oak Village · Inferno Tower</span>
+                    <span><time data-timer="4680" datetime="PT4680S">1h 18m</time> · <span data-finish="4680">Today</span></span>
+                  </li>
+                  <li class="cth-timeline-row" data-category="laboratory">
+                    <span>Stone Keep · Archer</span>
+                    <span><time data-timer="7200" datetime="PT7200S">2h</time> · <span data-finish="7200">Today</span></span>
+                  </li>
+                  <li class="cth-timeline-row" data-category="builders">
+                    <span>River Camp · Barracks</span>
+                    <span><time data-timer="9848" datetime="PT9848S">2h 44m</time> · <span data-finish="9848">Today</span></span>
+                  </li>
+                  <li class="cth-timeline-row" data-category="pets">
+                    <span>Oak Village · Unicorn</span>
+                    <span><time data-timer="16740" datetime="PT16740S">4h 39m</time> · <span data-finish="16740">Today</span></span>
+                  </li>
+                  <li class="cth-timeline-row" data-category="builders">
+                    <span>Pine Outpost · Army Camp</span>
+                    <span><time data-timer="103200" datetime="PT103200S">1d 4h 40m</time> · <span data-finish="103200">Tomorrow</span></span>
+                  </li>
+              </ul>
+            </section>
+
+            <section id="cth-settings" aria-label="Settings" hidden>
+                <section class="cth-settings-group">
+                  <h4>🌐 LANGUAGE</h4>
+                  <ul>
+                  <li><span aria-hidden="true">🇬🇧</span><span><strong>Language</strong><small>🇬🇧 English</small></span><span aria-hidden="true">›</span></li>
+                  </ul>
+                </section>
+                <section class="cth-settings-group">
+                  <h4>↻ SYNC</h4>
+                  <ul>
+                  <li><span aria-hidden="true">⚔</span><span><strong>Floating Sync button</strong><small>Off · tap to enable</small></span><span aria-hidden="true">›</span></li>
+                  <li><span aria-hidden="true">▤</span><span><strong>Sync from clipboard</strong><small>Import a copied Clash export</small></span><span aria-hidden="true">›</span></li>
+                  </ul>
+                </section>
+                <section class="cth-settings-group">
+                  <h4>♧ NOTIFICATIONS</h4>
+                  <ul>
+                  <li><span aria-hidden="true">♧</span><span><strong>Set up notifications</strong><small>Completion notifications and warnings</small></span><span aria-hidden="true">›</span></li>
+                  <li><span aria-hidden="true">✓</span><span><strong>Check permissions</strong><small>Notifications, floating button, alarms and app updates</small></span><span aria-hidden="true">›</span></li>
+                  <li><span aria-hidden="true">✓</span><span><strong>Test notification</strong><small>Check whether notifications arrive</small></span><span aria-hidden="true">›</span></li>
+                  <li><span aria-hidden="true">◷</span><span><strong>Alarm test in 1 minute</strong><small>Check whether Android triggers an alarm</small></span><span aria-hidden="true">›</span></li>
+                  </ul>
+                </section>
+                <section class="cth-settings-group">
+                  <h4>▦ HOME SCREEN WIDGET</h4>
+                  <ul>
+                  <li><span aria-hidden="true">⚙</span><span><strong>Configure widget</strong><small>All Timers, mini account, account or Sync</small></span><span aria-hidden="true">›</span></li>
+                  </ul>
+                </section>
+                <section class="cth-settings-group">
+                  <h4>♙ ACCOUNTS</h4>
+                  <ul>
+                  <li><span aria-hidden="true">✎</span><span><strong>Rename accounts</strong><small>Change the name without changing the player tag</small></span><span aria-hidden="true">›</span></li>
+                  </ul>
+                </section>
+                <section class="cth-settings-group">
+                  <h4>↓ APP UPDATES</h4>
+                  <ul>
+                  <li><span aria-hidden="true">↻</span><span><strong>Check for updates</strong><small>Compare with the latest published APK</small></span><span aria-hidden="true">›</span></li>
+                  <li><span aria-hidden="true">↓</span><span><strong>View GitHub builds</strong><small>Open builds in your browser</small></span><span aria-hidden="true">›</span></li>
+                  </ul>
+                </section>
+                <section class="cth-settings-group">
+                  <h4>▣ BACKUP</h4>
+                  <ul>
+                  <li><span aria-hidden="true">▣</span><span><strong>Copy backup</strong><small>Accounts, timers, language, notifications and widget settings</small></span><span aria-hidden="true">›</span></li>
+                  <li><span aria-hidden="true">↶</span><span><strong>Restore backup</strong><small>Restore timers and saved preferences</small></span><span aria-hidden="true">›</span></li>
+                  </ul>
+                </section>
+            </section>
+            <section id="cth-collections" class="cth-collections" aria-label="Equipment and collections" hidden>
+              <button class="cth-plain-button cth-back" type="button" data-close-collections>‹ Back to account</button>
+              <h3 data-collection-account></h3>
+              <p>Equipment and collectibles from your Clash export</p>
+              <p class="cth-ready">Last collection export: sample export</p>
+              <div class="cth-collection-tabs" role="group" aria-label="Collection type">
+                <button type="button" data-collection-tab aria-controls="cth-collection-equipment" aria-pressed="true">Equipment</button>
+                <button type="button" data-collection-tab aria-controls="cth-collection-decorations" aria-pressed="false">Decorations</button>
+                <button type="button" data-collection-tab aria-controls="cth-collection-obstacles" aria-pressed="false">Obstacles</button>
+                <button type="button" data-collection-tab aria-controls="cth-collection-skins" aria-pressed="false">Skins</button>
+                <button type="button" data-collection-tab aria-controls="cth-collection-sceneries" aria-pressed="false">Sceneries</button>
+              </div>
+              <div id="cth-collection-equipment">
+                <h4>HERO EQUIPMENT</h4>
+                <p>2 item types found</p>
+                <div class="cth-collection-item"><strong>Barbarian Puppet</strong><small>Level 12/18 · Common · Barbarian King</small></div>
+                <div class="cth-collection-item"><strong>Invisibility Vial</strong><small>Level 15/18 · Common · Archer Queen</small></div>
+              </div>
+              <div id="cth-collection-decorations" hidden>
+                <h4>HOME VILLAGE</h4>
+                <p>Not included in this export.</p>
+                <h4>BUILDER BASE</h4>
+                <p>Not included in this export.</p>
+              </div>
+              <div id="cth-collection-obstacles" hidden>
+                <h4>HOME VILLAGE</h4>
+                <p>Not included in this export.</p>
+                <h4>BUILDER BASE</h4>
+                <p>Not included in this export.</p>
+              </div>
+              <div id="cth-collection-skins" hidden>
+                <h4>HOME VILLAGE</h4>
+                <p>Not included in this export.</p>
+                <h4>BUILDER BASE</h4>
+                <p>Not included in this export.</p>
+              </div>
+              <div id="cth-collection-sceneries" hidden>
+                <h4>HOME VILLAGE</h4>
+                <p>Not included in this export.</p>
+                <h4>BUILDER BASE</h4>
+                <p>Not included in this export.</p>
+              </div>
+              <p class="cth-collection-note">An item missing from the export is not necessarily unowned. Ore estimates may change with game updates.</p>
             </section>
           </div>
+          <div class="cth-system-bar" aria-hidden="true"></div>
         </div>
-        <div class="demo-controls" hidden>
-          <div class="segmented" role="group" aria-label="Demo view">
-            <button type="button" aria-controls="demo-dashboard" aria-pressed="true">Dashboard</button>
-            <button type="button" aria-controls="demo-widget" aria-pressed="false">Widget</button>
+
+        <section id="cth-widget" class="cth-widget-preview" aria-label="Home screen widget" hidden>
+          <div class="cth-widget">
+              <div class="cth-widget-row">
+                <div><strong>Oak Village</strong><span class="cth-widget-builders">⚒ 4</span><span class="cth-widget-next"><time data-timer="4680" datetime="PT4680S">1h 18m</time></span></div>
+                <div><span>🧙 1</span><span>🐾 1</span><span><span data-finish="4680">Today</span></span></div>
+              </div>
+              <div class="cth-widget-row">
+                <div><strong>Stone Keep</strong><span class="cth-widget-builders">⚒ 5</span><span class="cth-widget-next"><time data-timer="1370" datetime="PT1370S">22m 50s</time></span></div>
+                <div><span>🧙 1</span><span>🐾 —</span><span><span data-finish="1370">Today</span></span></div>
+              </div>
+              <div class="cth-widget-row">
+                <div><strong>River Camp</strong><span class="cth-widget-builders">⚒ 3</span><span class="cth-widget-next"><time data-timer="9848" datetime="PT9848S">2h 44m</time></span></div>
+                <div><span>🧙 ✓</span><span>🐾 1</span><span><span data-finish="9848">Today</span></span></div>
+              </div>
+              <div class="cth-widget-row">
+                <div><strong>Pine Outpost</strong><span class="cth-widget-builders">⚒ 2</span><span class="cth-widget-next"><time data-timer="103200" datetime="PT103200S">1d 4h 40m</time></span></div>
+                <div><span>🧙 1</span><span>🐾 —</span><span><span data-finish="103200">Tomorrow</span></span></div>
+              </div>
+            <div class="cth-widget-footer"><span>Sync OFF</span><span aria-label="Widget settings">⚙</span></div>
           </div>
-          <button type="button" class="play-toggle" data-pause>Pause sample timers</button>
-        </div>
+        </section>
       </div>
     </section>
     <section class="section faq" aria-labelledby="app-faq">
