@@ -17,7 +17,7 @@ Open http://localhost:8000. The Clash Timer Hub demo uses sample timers.
 In the repository settings, open Pages and choose Deploy from a branch. Select `main` and `/ (root)`.
 
 Project URL after publishing  
-https://ashot978.github.io/AshLabStudios/
+https://ashot978.github.io/GrigorianPortfolio/
 
 ## Add an app
 
