@@ -26,21 +26,123 @@
       <p class="lede">Track upgrade timers across your Clash of Clans accounts. View them in the app or add the widget to your home screen.</p>
       <a class="button" href="https://github.com/ashot978/ClashTimerHub">View the project on GitHub <span aria-hidden="true">↗</span></a>
     </section>
-    <section class="section demo-section" aria-labelledby="demo-title">
+    <section class="section demo-section cth-demo-section" aria-labelledby="demo-title">
       <div>
         <h2 id="demo-title">Try the demo</h2>
-        <p>Explore the Android interface from <a href="https://github.com/ashot978/ClashTimerHub/releases/tag/build-568">build #568</a> with sample accounts and live countdowns.</p>
+        <p>Try the home screen widget from <a href="https://github.com/ashot978/ClashTimerHub/releases/tag/build-568">build #568</a> with live sample timers for builders, the lab, pets and helpers. Switch to App to explore the rest of the interface.</p>
       </div>
       <div class="demo cth-demo" data-clash-demo aria-label="Interactive demo of Clash Timer Hub">
         <div class="cth-preview-controls" hidden>
           <div role="group" aria-label="Preview type">
-            <button type="button" data-preview aria-controls="cth-app" aria-pressed="true">App</button>
-            <button type="button" data-preview aria-controls="cth-widget" aria-pressed="false">Widget</button>
+            <button type="button" data-preview aria-controls="cth-widget" aria-pressed="true">Widget</button>
+            <button type="button" data-preview aria-controls="cth-app" aria-pressed="false">App</button>
           </div>
           <button type="button" data-pause>Pause sample timers</button>
         </div>
 
-        <div id="cth-app" class="cth-app">
+        <section id="cth-widget" class="cth-widget-preview" aria-label="Home screen widget">
+          <div class="cth-widget">
+            <div class="cth-widget-row">
+              <div class="cth-widget-account">
+                <strong>Oak Village</strong>
+                <span class="cth-widget-builders" aria-label="1 ready, 4 active builders">1✓ 4⚒</span>
+              </div>
+              <dl class="cth-widget-timers">
+                <div class="cth-widget-next">
+                  <dt><span aria-hidden="true">⚒</span> Next builder</dt>
+                  <dd><time data-timer="4680" datetime="PT4680S">1h 18m</time> <small data-finish="4680">Today</small></dd>
+                </div>
+                <div>
+                  <dt><span aria-hidden="true">🧙</span> Lab</dt>
+                  <dd><time data-timer="24720" datetime="PT24720S">6h 52m</time></dd>
+                </div>
+                <div>
+                  <dt><span aria-hidden="true">🐾</span> Pet</dt>
+                  <dd><time data-timer="16740" datetime="PT16740S">4h 39m</time></dd>
+                </div>
+                <div class="cth-widget-helpers">
+                  <dt><span aria-hidden="true">🤝</span> Helpers <small>1/3 ready</small></dt>
+                  <dd><time data-timer="2100" datetime="PT2100S">35m 0s</time></dd>
+                </div>
+              </dl>
+            </div>
+            <div class="cth-widget-row">
+              <div class="cth-widget-account">
+                <strong>Stone Keep</strong>
+                <span class="cth-widget-builders" aria-label="0 ready, 5 active builders">0✓ 5⚒</span>
+              </div>
+              <dl class="cth-widget-timers">
+                <div class="cth-widget-next">
+                  <dt><span aria-hidden="true">⚒</span> Next builder</dt>
+                  <dd><time data-timer="1370" datetime="PT1370S">22m 50s</time> <small data-finish="1370">Today</small></dd>
+                </div>
+                <div>
+                  <dt><span aria-hidden="true">🧙</span> Lab</dt>
+                  <dd><time data-timer="7200" datetime="PT7200S">2h</time></dd>
+                </div>
+                <div>
+                  <dt><span aria-hidden="true">🐾</span> Pet</dt>
+                  <dd>Idle</dd>
+                </div>
+                <div class="cth-widget-helpers">
+                  <dt><span aria-hidden="true">🤝</span> Helpers <small>0/3 ready</small></dt>
+                  <dd><time data-timer="5880" datetime="PT5880S">1h 38m</time></dd>
+                </div>
+              </dl>
+            </div>
+            <div class="cth-widget-row">
+              <div class="cth-widget-account">
+                <strong>River Camp</strong>
+                <span class="cth-widget-builders" aria-label="0 ready, 3 active builders">0✓ 3⚒</span>
+              </div>
+              <dl class="cth-widget-timers">
+                <div class="cth-widget-next">
+                  <dt><span aria-hidden="true">⚒</span> Next builder</dt>
+                  <dd><time data-timer="9848" datetime="PT9848S">2h 44m</time> <small data-finish="9848">Today</small></dd>
+                </div>
+                <div>
+                  <dt><span aria-hidden="true">🧙</span> Lab</dt>
+                  <dd>Maxed ✓</dd>
+                </div>
+                <div>
+                  <dt><span aria-hidden="true">🐾</span> Pet</dt>
+                  <dd><time data-timer="22860" datetime="PT22860S">6h 21m</time></dd>
+                </div>
+                <div class="cth-widget-helpers">
+                  <dt><span aria-hidden="true">🤝</span> Helpers <small>2/3 ready</small></dt>
+                  <dd><time data-timer="4920" datetime="PT4920S">1h 22m</time></dd>
+                </div>
+              </dl>
+            </div>
+            <div class="cth-widget-row">
+              <div class="cth-widget-account">
+                <strong>Pine Outpost</strong>
+                <span class="cth-widget-builders" aria-label="0 ready, 2 active builders">0✓ 2⚒</span>
+              </div>
+              <dl class="cth-widget-timers">
+                <div class="cth-widget-next">
+                  <dt><span aria-hidden="true">⚒</span> Next builder</dt>
+                  <dd><time data-timer="103200" datetime="PT103200S">1d 4h 40m</time> <small data-finish="103200">Tomorrow</small></dd>
+                </div>
+                <div>
+                  <dt><span aria-hidden="true">🧙</span> Lab</dt>
+                  <dd><time data-timer="36480" datetime="PT36480S">10h 8m</time></dd>
+                </div>
+                <div>
+                  <dt><span aria-hidden="true">🐾</span> Pet</dt>
+                  <dd>Idle</dd>
+                </div>
+                <div class="cth-widget-helpers">
+                  <dt><span aria-hidden="true">🤝</span> Helpers <small>3/3 ready</small></dt>
+                  <dd>Ready ✓</dd>
+                </div>
+              </dl>
+            </div>
+            <div class="cth-widget-footer"><span>Sync OFF</span><span aria-label="Widget settings">⚙</span></div>
+          </div>
+        </section>
+
+        <div id="cth-app" class="cth-app" hidden>
           <div class="cth-system-bar" aria-hidden="true"></div>
           <div class="cth-navigation" data-navigation role="group" aria-label="App navigation">
             <button type="button" data-tab aria-controls="cth-overview" aria-pressed="true" disabled>Overview</button>
@@ -176,6 +278,18 @@
                     <span>Oak Village · Unicorn</span>
                     <span><time data-timer="16740" datetime="PT16740S">4h 39m</time> · <span data-finish="16740">Today</span></span>
                   </li>
+                  <li class="cth-timeline-row" data-category="pets">
+                    <span>River Camp · Electro Owl</span>
+                    <span><time data-timer="22860" datetime="PT22860S">6h 21m</time> · <span data-finish="22860">Today</span></span>
+                  </li>
+                  <li class="cth-timeline-row" data-category="laboratory">
+                    <span>Oak Village · Wizard</span>
+                    <span><time data-timer="24720" datetime="PT24720S">6h 52m</time> · <span data-finish="24720">Today</span></span>
+                  </li>
+                  <li class="cth-timeline-row" data-category="laboratory">
+                    <span>Pine Outpost · Giant</span>
+                    <span><time data-timer="36480" datetime="PT36480S">10h 8m</time> · <span data-finish="36480">Today</span></span>
+                  </li>
                   <li class="cth-timeline-row" data-category="builders">
                     <span>Pine Outpost · Army Camp</span>
                     <span><time data-timer="103200" datetime="PT103200S">1d 4h 40m</time> · <span data-finish="103200">Tomorrow</span></span>
@@ -281,27 +395,6 @@
           <div class="cth-system-bar" aria-hidden="true"></div>
         </div>
 
-        <section id="cth-widget" class="cth-widget-preview" aria-label="Home screen widget" hidden>
-          <div class="cth-widget">
-              <div class="cth-widget-row">
-                <div><strong>Oak Village</strong><span class="cth-widget-builders">⚒ 4</span><span class="cth-widget-next"><time data-timer="4680" datetime="PT4680S">1h 18m</time></span></div>
-                <div><span>🧙 1</span><span>🐾 1</span><span><span data-finish="4680">Today</span></span></div>
-              </div>
-              <div class="cth-widget-row">
-                <div><strong>Stone Keep</strong><span class="cth-widget-builders">⚒ 5</span><span class="cth-widget-next"><time data-timer="1370" datetime="PT1370S">22m 50s</time></span></div>
-                <div><span>🧙 1</span><span>🐾 —</span><span><span data-finish="1370">Today</span></span></div>
-              </div>
-              <div class="cth-widget-row">
-                <div><strong>River Camp</strong><span class="cth-widget-builders">⚒ 3</span><span class="cth-widget-next"><time data-timer="9848" datetime="PT9848S">2h 44m</time></span></div>
-                <div><span>🧙 ✓</span><span>🐾 1</span><span><span data-finish="9848">Today</span></span></div>
-              </div>
-              <div class="cth-widget-row">
-                <div><strong>Pine Outpost</strong><span class="cth-widget-builders">⚒ 2</span><span class="cth-widget-next"><time data-timer="103200" datetime="PT103200S">1d 4h 40m</time></span></div>
-                <div><span>🧙 1</span><span>🐾 —</span><span><span data-finish="103200">Tomorrow</span></span></div>
-              </div>
-            <div class="cth-widget-footer"><span>Sync OFF</span><span aria-label="Widget settings">⚙</span></div>
-          </div>
-        </section>
       </div>
     </section>
     <section class="section faq" aria-labelledby="app-faq">
