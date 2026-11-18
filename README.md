@@ -1,6 +1,6 @@
 # Ashot Grigorian · Portfolio
 
-Personal portfolio with a CV, case studies and AshLab Studios projects. Built in HTML, CSS and JavaScript without a build step or external dependencies.
+Personal portfolio with a CV and AshLab Studios projects. Built in HTML, CSS and JavaScript without a build step or external dependencies.
 
 ## Preview locally
 

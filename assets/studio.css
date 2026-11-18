@@ -32,9 +32,20 @@ button { font: inherit; }
 .wordmark { display: inline-flex; align-items: center; font-weight: 760; letter-spacing: -.045em; text-decoration: none; }
 .mark { display: inline-grid; place-items: center; width: 2rem; height: 2rem; margin-right: .65rem; border-radius: 50%; background: var(--ink); color: var(--acid); font: 1.4rem/1 system-ui, sans-serif; transition: transform .45s; }
 .wordmark:hover .mark { transform: rotate(45deg); }
-.nav { display: flex; flex-wrap: wrap; gap: .55rem clamp(1rem, 4vw, 2.75rem); }
+.nav { display: flex; align-items: center; flex-wrap: wrap; gap: .55rem clamp(1rem, 4vw, 2.75rem); }
 .nav a { font-weight: 650; text-decoration: none; }
 .nav a:hover { text-decoration: underline; }
+.nav .home-link {
+  display: inline-flex;
+  align-items: center;
+  gap: .45rem;
+  padding: .35rem .65rem;
+  border: 1px solid var(--ink);
+  border-radius: .3rem;
+  background: var(--acid);
+  font-size: .875rem;
+}
+.nav .home-link:hover { background: #e7ff89; text-decoration: none; }
 
 .hero {
   display: grid;
