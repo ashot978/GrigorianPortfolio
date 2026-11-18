@@ -1,6 +1,6 @@
 # AshLab Studios
 
-Portfolio voor Android-apps in HTML, CSS en JavaScript. Geen build of externe dependencies.
+Persoonlijk portfolio voor prototypes en apps in HTML, CSS en JavaScript. Geen build of externe dependencies.
 
 ## Voorbeeld lokaal openen
 
@@ -10,7 +10,7 @@ Start vanuit deze map
 python3 -m http.server 8000
 ```
 
-Open http://localhost:8000. De demo gebruikt fictieve timers.
+Open http://localhost:8000. De Clash Timer Hub-projectpagina bevat een demo met fictieve timers.
 
 ## GitHub Pages
 

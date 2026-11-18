@@ -6,12 +6,13 @@
   <meta name="description" content="Clash Timer Hub bundelt bouwtimers voor meerdere Clash of Clans-accounts. Bekijk de widget, FAQ en projectinformatie.">
   <title>Clash Timer Hub · AshLab Studios</title>
   <link rel="stylesheet" href="../../assets/studio.css">
+  <script src="../../assets/studio.js" defer></script>
 </head>
 <body>
   <a class="skip" href="#inhoud">Naar de inhoud</a>
   <header class="shell topbar">
     <a class="wordmark" href="../../"><span class="mark" aria-hidden="true">✳</span> AshLab Studios</a>
-    <nav class="nav" aria-label="Hoofdnavigatie"><a href="../../#apps">Alle apps</a></nav>
+    <nav class="nav" aria-label="Hoofdnavigatie"><a href="../../#werk">Mijn werk</a></nav>
   </header>
   <main id="inhoud" class="shell">
     <section class="subhero">
@@ -19,6 +20,50 @@
       <h1>Clash Timer<br><em>Hub.</em></h1>
       <p class="lede">Volg je bouwtimers voor meerdere Clash of Clans-accounts. Bekijk ze in de app of zet de widget op je startscherm.</p>
       <a class="button" href="https://github.com/ashot978/ClashTimerHub">Bekijk het project op GitHub <span aria-hidden="true">↗</span></a>
+    </section>
+    <section class="section demo-section" aria-labelledby="demo-title">
+      <div>
+        <h2 id="demo-title">Probeer de demo</h2>
+        <p>Wissel tussen het dashboard en de widget. De voorbeeldtimers kun je pauzeren.</p>
+      </div>
+      <div class="demo" aria-label="Interactieve demonstratie van Clash Timer Hub">
+        <div class="demo-head">
+          <div class="demo-brand"><span aria-hidden="true">◷</span> Clash Timer Hub</div>
+          <span class="demo-label">Demo</span>
+        </div>
+        <div class="demo-body">
+          <div class="device" data-device>
+            <section id="demo-overzicht" aria-label="Overzicht met voorbeeldtimers">
+              <div class="device-header"><span>Builder-timers</span><span class="device-tag">02 actief</span></div>
+              <div class="timer-row">
+                <span class="timer-icon green" aria-hidden="true">↗</span>
+                <div><strong>Hoofddorp</strong><small>Upgrade loopt</small></div>
+                <time data-timer="4643">01:17:23</time>
+              </div>
+              <div class="timer-row">
+                <span class="timer-icon lilac" aria-hidden="true">↗</span>
+                <div><strong>Tweede dorp</strong><small>Upgrade loopt</small></div>
+                <time data-timer="9848">02:44:08</time>
+              </div>
+            </section>
+            <section id="demo-widget" aria-label="Widget met voorbeeldtimer" hidden>
+              <div class="device-header"><span>Homescreenwidget</span><span class="device-tag">Compact</span></div>
+              <div class="widget">
+                <span class="widget-label">Volgende upgrade klaar</span>
+                <time data-timer="4643">01:17:23</time>
+                <span>Hoofddorp</span>
+              </div>
+            </section>
+          </div>
+        </div>
+        <div class="demo-controls" hidden>
+          <div class="segmented" role="group" aria-label="Demoweergave">
+            <button type="button" aria-controls="demo-overzicht" aria-pressed="true">Overzicht</button>
+            <button type="button" aria-controls="demo-widget" aria-pressed="false">Widget</button>
+          </div>
+          <button type="button" class="play-toggle" data-pause>Timervoorbeeld pauzeren</button>
+        </div>
+      </div>
     </section>
     <section class="section faq" aria-labelledby="app-faq">
       <h2 id="app-faq">Veelgestelde vragen</h2>
