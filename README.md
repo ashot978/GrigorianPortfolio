@@ -21,4 +21,4 @@ https://ashot978.github.io/GrigorianPortfolio/
 
 ## Add an app
 
-Create a folder under `apps/` and add a card to `work/ashlab-studios/index.html`. Use `drafts/app-policy.md` to prepare the app’s policies. Add the direct link to the final privacy policy in Play Console and in the app.
+Create a folder under `apps/` and add a card to `work/ashlab-studios/index.html`. Give each app its own FAQ, support link and privacy page. Link the shared terms at `work/ashlab-studios/terms.html` and publish additional app terms if needed. Use `drafts/app-policy.md` to prepare the app’s policies. Add the direct link to the final privacy policy in Play Console and in the app.
