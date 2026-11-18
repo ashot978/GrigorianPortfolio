@@ -6,11 +6,12 @@
   <meta name="description" content="Track Clash of Clans upgrade timers across multiple accounts with Clash Timer Hub. Explore the widget, FAQ and project details.">
   <title>Clash Timer Hub · AshLab Studios</title>
   <link rel="stylesheet" href="../../assets/studio.css">
-  <link rel="stylesheet" href="../../assets/clash-demo.css?v=app-icon-1">
+  <link rel="stylesheet" href="../../assets/clash-demo.css?v=product-hero-1">
   <script src="../../assets/scroll.js" defer></script>
+  <script src="../../assets/home.js" defer></script>
   <script src="../../assets/clash-demo.js?v=all-timers-1" defer></script>
 </head>
-<body>
+<body class="cth-product">
   <a class="skip" href="#main-content">Skip to content</a>
   <header class="shell topbar">
     <a class="wordmark" href="../../"><span class="mark" aria-hidden="true">A</span> Ashot Grigorian</a>
@@ -20,19 +21,28 @@
     </nav>
   </header>
   <main id="main-content" class="shell">
-    <section class="subhero">
-      <p class="eyebrow"><span class="dot" aria-hidden="true"></span> Android · In development</p>
-      <div class="cth-project-heading">
-        <img class="project-icon" src="../../assets/clash-timer-hub-shield.webp" width="384" height="384" alt="">
-        <h1>Clash Timer<br><em>Hub.</em></h1>
+    <section class="cth-product-hero" aria-labelledby="cth-title">
+      <div class="cth-product-copy">
+        <p class="eyebrow">Android · Home-screen widget</p>
+        <h1 id="cth-title">Clash Timer <span>Hub</span></h1>
+        <p class="lede">See what finishes next across your Clash of Clans accounts. Check builder, lab, pet and helper timers from one home-screen widget.</p>
+        <div class="hero-actions">
+          <a class="button cth-primary" href="#demo">Try the live demo <span aria-hidden="true">↓</span></a>
+          <a class="cth-secondary" href="https://github.com/ashot978/ClashTimerHub">View on GitHub <span aria-hidden="true">↗</span></a>
+        </div>
       </div>
-      <p class="lede">Track upgrade timers across your Clash of Clans accounts. View them in the app or add the widget to your home screen.</p>
-      <a class="button" href="https://github.com/ashot978/ClashTimerHub">View the project on GitHub <span aria-hidden="true">↗</span></a>
+      <div class="cth-emblem-stage" data-hero-art aria-hidden="true">
+        <div class="cth-emblem-scene">
+          <span class="cth-orbit cth-orbit-outer"></span>
+          <span class="cth-orbit cth-orbit-inner"></span>
+          <img class="cth-emblem" src="../../assets/clash-timer-hub-shield.webp" width="384" height="384" alt="" fetchpriority="high">
+        </div>
+      </div>
     </section>
-    <section class="section demo-section cth-demo-section" aria-labelledby="demo-title">
+    <section id="demo" class="section demo-section cth-demo-section" aria-labelledby="demo-title">
       <div>
         <h2 id="demo-title">Try the demo</h2>
-        <p>Try the home screen widget from <a href="https://github.com/ashot978/ClashTimerHub/releases/tag/build-568">build #568</a> with live sample timers for builders, the lab, pets and helpers. Switch to App to explore the rest of the interface.</p>
+        <p>The widget opens with seven sample accounts and live countdowns. Switch to App to explore the dashboard, timeline and settings.</p>
       </div>
       <div class="demo cth-demo" data-clash-demo aria-label="Interactive demo of Clash Timer Hub">
         <div class="cth-preview-controls" hidden>
