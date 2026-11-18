@@ -35,7 +35,7 @@ button { font: inherit; }
 .nav { display: flex; align-items: center; flex-wrap: wrap; gap: .55rem clamp(1rem, 4vw, 2.75rem); }
 .nav a { font-weight: 650; text-decoration: none; }
 .nav a:hover { text-decoration: underline; }
-.nav .home-link {
+.home-link {
   display: inline-flex;
   align-items: center;
   gap: .45rem;
@@ -44,8 +44,10 @@ button { font: inherit; }
   border-radius: .3rem;
   background: var(--acid);
   font-size: .875rem;
+  font-weight: 650;
+  text-decoration: none;
 }
-.nav .home-link:hover { background: #e7ff89; text-decoration: none; }
+.home-link:hover, .nav .home-link:hover { background: #e7ff89; text-decoration: none; }
 
 .hero {
   display: grid;
